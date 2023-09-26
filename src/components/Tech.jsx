@@ -1,3 +1,4 @@
+import * as THREE from 'three';
 import React, { Suspense } from 'react';
 import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, Preload } from '@react-three/drei';
