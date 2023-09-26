@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { Suspense, useMemo } from 'react';
 import { Canvas, useLoader } from '@react-three/fiber';
-import { Float, OrbitControls, Preload, Decal } from '@react-three/drei'; // Import Decal from @react-three/drei
+import { Float, OrbitControls, Preload, Decal } from '@react-three/drei';
 import { technologies } from '../constants';
 import CanvasLoader from './Loader';
 import { SectionWrapper } from '../hoc';

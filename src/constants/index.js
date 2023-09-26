@@ -18,6 +18,14 @@ import {
   metaverse,
   chatly,
   gamehub,
+  javascript,
+  css,
+  html,
+  flask,
+  cpp,
+  cs,
+  asp,
+  git,
 } from '../assets';
 
 export const navLinks = [
@@ -51,18 +59,18 @@ const services = [
 ];
 
 const technologies = [
-  // {
-  //   name: 'HTML 5',
-  //   icon: html,
-  // },
-  // {
-  //   name: 'CSS 3',
-  //   icon: css,
-  // },
-  // {
-  //   name: 'JavaScript',
-  //   icon: javascript,
-  // },
+  {
+    name: 'HTML 5',
+    icon: html,
+  },
+  {
+    name: 'CSS 3',
+    icon: css,
+  },
+  {
+    name: 'JavaScript',
+    icon: javascript,
+  },
   {
     name: 'TypeScript',
     icon: typescript,
@@ -91,28 +99,28 @@ const technologies = [
     name: 'python',
     icon: python,
   },
-  // {
-  //   name: 'flask',
-  //   icon: flask,
-  // },
+  {
+    name: 'flask',
+    icon: flask,
+  },
   {
     name: 'django',
     icon: django,
   },
 
-  // {
-  //   name: 'cpp',
-  //   icon: cpp,
-  // },
-  // {
-  //   name: 'cs',
-  //   icon: cs,
-  // },
+  {
+    name: 'cpp',
+    icon: cpp,
+  },
+  {
+    name: 'cs',
+    icon: cs,
+  },
 
-  // {
-  //   name: 'aspdotnet',
-  //   icon: asp,
-  // },
+  {
+    name: 'aspdotnet',
+    icon: asp,
+  },
   {
     name: 'flutter',
     icon: flutter,
@@ -130,10 +138,10 @@ const technologies = [
     icon: redis,
   },
 
-  // {
-  //   name: 'git',
-  //   icon: git,
-  // },
+  {
+    name: 'git',
+    icon: git,
+  },
 ];
 
 const experiences = [
