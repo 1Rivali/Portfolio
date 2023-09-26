@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { useGLTF, Preload } from '@react-three/drei';
+import CanvasLoader from '../Loader';
 
 const Computers = ({ isMobile }) => {
   const { scene, error } = useGLTF('./desktop_pc/scene.gltf');
@@ -59,7 +60,7 @@ const ComputersCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
       />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<CanvasLoader />}>
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
