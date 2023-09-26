@@ -1,22 +1,22 @@
 import * as THREE from 'three';
 import { Suspense, useMemo } from 'react';
 import { Canvas, useLoader } from '@react-three/fiber';
-import { Float, OrbitControls, Preload } from '@react-three/drei';
+import { Float, OrbitControls, Preload, Decal } from '@react-three/drei'; // Import Decal from @react-three/drei
 import { technologies } from '../constants';
-import CanvasLoader from './Loader';
+import CanvasLoader from '../Loader';
 import { SectionWrapper } from '../hoc';
 
 const Ball = ({ imgUrl }) => {
-  const decal = useLoader(THREE.TextureLoader, imgUrl);
+  const decalTexture = useLoader(THREE.TextureLoader, imgUrl);
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial color={'#FAF9F6'} />
-        <decalGeometry
-          attach="geometry"
-          map={decal}
+        <Decal
+          position={[0, 0, 1]}
+          texture={decalTexture} // Use 'texture' prop instead of 'map'
           rotation={[2 * Math.PI, 0, 6.25]}
           flatShading
         />
