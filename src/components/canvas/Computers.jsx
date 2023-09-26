@@ -4,14 +4,19 @@ import { OrbitControls } from '@react-three/drei';
 import { useGLTF, Preload } from '@react-three/drei';
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf');
+  const { scene, error } = useGLTF('./desktop_pc/scene.gltf');
+
+  if (error) {
+    // Handle the error (e.g., display an error message)
+    return <div>Error loading 3D model</div>;
+  }
 
   return (
     <mesh frustumCulled={false}>
       <pointLight intensity={isMobile ? 0.5 : 1.5} color="blue" />
       <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.1 : 0.7} // Adjust scale for mobile
+        object={scene}
+        scale={isMobile ? [0.1, 0.1, 0.1] : [0.7, 0.7, 0.7]} // Adjust scale for mobile
         position={isMobile ? [0, -0.2, -0.5] : [0, -3.25, -1.25]} // Adjust position for mobile
         rotation={[-0.01, -0.2, -0.1]}
       />
@@ -54,7 +59,7 @@ const ComputersCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
       />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
