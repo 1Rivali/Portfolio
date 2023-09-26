@@ -1,14 +1,13 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import CanvasLoader from '../Loader';
+import { OrbitControls } from '@react-three/drei';
+import { useGLTF, Preload } from '@react-three/drei';
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
 
   return (
-    <mesh>
-      <hemisphereLight intensity={3.0} groundColor="blue" />
+    <mesh frustumCulled={false}>
       <pointLight intensity={isMobile ? 0.5 : 1.5} color="blue" />
       <primitive
         object={computer.scene}
@@ -35,23 +34,26 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  const cameraSettings = useMemo(() => ({ position: [20, 3, 5], fov: 25 }), []);
+
   return (
     <Canvas
       frameloop="demand"
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={cameraSettings}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enablePan={false}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+      <OrbitControls
+        enablePan={false}
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+      />
+      <Suspense fallback={null}>
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>
   );
 };
+
 export default ComputersCanvas;
