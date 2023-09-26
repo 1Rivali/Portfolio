@@ -11,8 +11,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={isMobile ? 0.5 : 1.5} color="blue" />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.25 : 0.7}
-        position={isMobile ? [0, -0.4, -0.5] : [0, -3.25, -1.25]}
+        scale={isMobile ? 0.1 : 0.7} // Adjust scale for mobile
+        position={isMobile ? [0, -0.2, -0.5] : [0, -3.25, -1.25]} // Adjust position for mobile
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -23,7 +23,7 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width:500px)');
+    const mediaQuery = window.matchMedia('(max-width: 768px)'); // Adjust the max-width for your needs
     setIsMobile(mediaQuery.matches);
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
@@ -34,7 +34,13 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  const cameraSettings = useMemo(() => ({ position: [20, 3, 5], fov: 25 }), []);
+  const cameraSettings = useMemo(
+    () => ({
+      position: isMobile ? [0, 1, 4] : [20, 3, 5], // Adjust camera position for mobile
+      fov: isMobile ? 45 : 25, // Adjust field of view for mobile
+    }),
+    [isMobile]
+  );
 
   return (
     <Canvas
@@ -43,8 +49,8 @@ const ComputersCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <OrbitControls
-        enablePan={false}
-        enableZoom={false}
+        enablePan={!isMobile} // Allow pan on non-mobile devices
+        enableZoom={!isMobile} // Allow zoom on non-mobile devices
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
       />
