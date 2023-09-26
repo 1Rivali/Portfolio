@@ -1,46 +1,32 @@
-import * as THREE from 'three';
-import { Suspense, useMemo } from 'react';
-import { Canvas, useLoader } from '@react-three/fiber';
-import { Float, OrbitControls, Preload, Decal } from '@react-three/drei';
-import { technologies } from '../constants';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload } from '@react-three/drei';
+import { technologies } from '../constants'; // Import your technologies array here
 import CanvasLoader from './Loader';
 import { SectionWrapper } from '../hoc';
 
-const Ball = ({ imgUrl }) => {
-  const decalTexture = useLoader(THREE.TextureLoader, imgUrl);
-
+function Ball(props) {
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial color={'#FAF9F6'} />
-        <Decal
-          position={[0, 0, 1]}
-          texture={decalTexture} // Use 'texture' prop instead of 'map'
-          rotation={[2 * Math.PI, 0, 6.25]}
-          flatShading
-        />
-      </mesh>
-    </Float>
+    <mesh castShadow receiveShadow scale={2.75}>
+      <icosahedronGeometry args={[1, 1]} />
+      <meshStandardMaterial color={'#FAF9F6'} />
+      <Suspense fallback={<CanvasLoader />}>
+        <preload all />
+        <imageTexture url={props.icon} />
+      </Suspense>
+    </mesh>
   );
-};
+}
 
-const Tech = () => {
-  const icons = useMemo(() => technologies.map((tech) => tech.icon), []);
-
+function Tech() {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
-      <Canvas frameloop="always">
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} enablePan={false} />
-          {icons.map((icon, index) => (
-            <Ball key={index} imgUrl={icon} />
-          ))}
-        </Suspense>
-        <Preload all />
-      </Canvas>
-    </div>
+    <Canvas frameloop="always">
+      <OrbitControls enableZoom={false} enablePan={false} />
+      {technologies.map((tech, index) => (
+        <Ball key={index} icon={tech.icon} />
+      ))}
+    </Canvas>
   );
-};
+}
 
 export default SectionWrapper(Tech, '');
