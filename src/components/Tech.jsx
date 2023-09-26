@@ -3,6 +3,7 @@ import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, Preload } from '@react-three/drei';
 import { technologies } from '../constants'; // Import your technologies array here
 import CanvasLoader from './Loader';
+import { SectionWrapper } from '../hoc';
 
 function Ball(props) {
   const texture = useLoader(THREE.TextureLoader, props.icon);
