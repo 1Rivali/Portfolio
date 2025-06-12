@@ -4,7 +4,6 @@ import {
   asp,
   awaed,
   backend,
-  chatly,
   cpp,
   cs,
   css,
@@ -317,32 +316,7 @@ const projects = [
     source_code_link: "https://github.com/fadi-alhabib/metaversus",
     live_link: "https://metaverse-two-tau.vercel.app/",
   },
-  {
-    name: "Chatly",
-    description:
-      "a dynamic chatting platform that leverages cutting-edge technologies, with a primary focus on real-time messaging",
-    tags: [
-      {
-        name: "NextJs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Redis",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Pusher",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: chatly,
-    source_code_link: "https://github.com/fadi-alhabib/chatly",
-    live_link: "https://chatly-gules.vercel.app/",
-  },
+
   {
     name: "GAMEHUB",
     description:
