@@ -1,161 +1,185 @@
 import {
-  mobile,
+  als,
+  arz,
+  asp,
+  awaed,
   backend,
-  web,
-  typescript,
-  reactjs,
-  nextjs,
-  tailwind,
-  mongodb,
-  obadi,
-  python,
-  django,
-  expressjs,
-  flutter,
-  mysql,
-  redis,
-  nestjs,
-  metaverse,
   chatly,
-  gamehub,
-  javascript,
-  css,
-  html,
-  flask,
   cpp,
   cs,
-  asp,
+  css,
+  flutter,
+  futureClr,
+  gamehub,
   git,
-} from '../assets';
+  grodd,
+  html,
+  javascript,
+  klgk,
+  metaverse,
+  mobile,
+  mongodb,
+  mysql,
+  nestjs,
+  nextjs,
+  obadi,
+  reactjs,
+  redis,
+  tailwind,
+  typescript,
+  web,
+} from "../assets";
 
 export const navLinks = [
   {
-    id: 'about',
-    title: 'About',
+    id: "about",
+    title: "About",
   },
   {
-    id: 'work',
-    title: 'Work',
+    id: "work",
+    title: "Work",
   },
   {
-    id: 'contact',
-    title: 'Contact',
+    id: "contact",
+    title: "Contact",
   },
 ];
 
 const services = [
   {
-    title: 'Frontend Developer',
+    title: "Frontend Development",
     icon: web,
   },
   {
-    title: 'Backend Developer',
+    title: "Backend Development",
     icon: backend,
   },
   {
-    title: 'Flutter Developer',
+    title: "Flutter Development",
     icon: mobile,
   },
 ];
 
 const technologies = [
   {
-    name: 'HTML 5',
+    name: "HTML 5",
     icon: html,
   },
   {
-    name: 'CSS 3',
+    name: "CSS 3",
     icon: css,
   },
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     icon: javascript,
   },
   {
-    name: 'TypeScript',
+    name: "TypeScript",
     icon: typescript,
   },
   {
-    name: 'ReactJS',
+    name: "ReactJS",
     icon: reactjs,
   },
   {
-    name: 'NextJs',
+    name: "NextJs",
     icon: nextjs,
   },
   {
-    name: 'Tailwind CSS',
+    name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: 'nestjs',
+    name: "nestjs",
     icon: nestjs,
   },
-  {
-    name: 'expressjs',
-    icon: expressjs,
-  },
-  {
-    name: 'python',
-    icon: python,
-  },
-  {
-    name: 'flask',
-    icon: flask,
-  },
-  {
-    name: 'django',
-    icon: django,
-  },
+  // {
+  //   name: "expressjs",
+  //   icon: expressjs,
+  // },
+  // {
+  //   name: "python",
+  //   icon: python,
+  // },
+  // {
+  //   name: "flask",
+  //   icon: flask,
+  // },
+  // {
+  //   name: "django",
+  //   icon: django,
+  // },
 
   {
-    name: 'cpp',
+    name: "cpp",
     icon: cpp,
   },
   {
-    name: 'cs',
+    name: "cs",
     icon: cs,
   },
 
   {
-    name: 'aspdotnet',
+    name: "aspdotnet",
     icon: asp,
   },
   {
-    name: 'flutter',
+    name: "flutter",
     icon: flutter,
   },
   {
-    name: 'MongoDB',
+    name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: 'MySQL',
+    name: "MySQL",
     icon: mysql,
   },
   {
-    name: 'redis',
+    name: "redis",
     icon: redis,
   },
 
   {
-    name: 'git',
+    name: "git",
     icon: git,
   },
 ];
 
 const experiences = [
   {
-    title: 'Backend Developer',
-    company_name: '3obadi',
-    icon: obadi,
-    iconBg: '#383E56',
-    date: ' 14/11/2022 - Current',
+    title: "Technical Lead",
+    company_name: "Ape Revolution Zone",
+    icon: arz,
+    iconBg: "#383E56",
+    date: " 04/2023 - 04/2025",
     points: [
-      'Fixing issues in an existing code base',
-      'Redesigning Backend Infrastructure',
-      '50% reduction in hosting expenses ',
-      'Improved Response time by 60%',
+      "Provided mentorship and guidance to junior team members in their professional growth.",
+      "Managed remote teams to ensure smooth delivery of projects.",
+      "Writing clean, maintainable, and well documented code, while ensuring system security and performance optimization.",
+    ],
+  },
+  {
+    title: "Fullstack Developer",
+    company_name: "Knowlgica LTD",
+    icon: klgk,
+    iconBg: "#383E56",
+    date: " 04/2023 - 04/2025",
+    points: [
+      "Building scalable backend services using C# and ASP.NET and integrating them with responsive frontend interfaces using ReactJs.",
+      "Writing clean, maintainable, and well documented code, while ensuring system security and performance optimization.",
+    ],
+  },
+  {
+    title: "Fullstack Developer",
+    company_name: "obadi",
+    icon: obadi,
+    iconBg: "#383E56",
+    date: " 11/2022 - 08/2022",
+    points: [
+      "Utilized security practices and techniques to protect applications and web pages from viruses and hacks.",
+      "Modernized legacy codebases to align with current industry standards, enhancing maintainability and future scalability.",
+      "Developed user-friendly mobile applications for iOS and Android platforms.",
     ],
   },
 ];
@@ -189,75 +213,158 @@ const experiences = [
 
 const projects = [
   {
-    name: 'Metaversus',
+    name: "Grodd, Feature-Based CLI Tool for React",
     description:
-      'Web application that allows users to see the beauty of the metaverse',
+      "Created a command-line tool to automate and streamline feature-based architecture in React applications, reducing setup time and enforcing best practices",
     tags: [
       {
-        name: 'react',
-        color: 'blue-text-gradient',
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: grodd,
+    // source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://www.npmjs.com/package/grodd",
+  },
+  {
+    name: "Awaed Game Suit For LEAP 2025",
+    description:
+      "in a matter of 4 days I developed 3 games (Mines, Plinko, Spin the Wheel) for awaed's booth at LEAP",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
       },
       {
-        name: 'framer-motion',
-        color: 'green-text-gradient',
+        name: "chakraui",
+        color: "green-text-gradient",
       },
       {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
+        name: "Framer Motion",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: awaed,
+    // source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://awaed.aperevolutionzone.com/",
+  },
+  {
+    name: "Future Colors Printing",
+    description:
+      "Portfolio for a printing company based in saudi arabia with an admin dashboard to control the content of the site",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "chakraui",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: futureClr,
+    // source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://futureclr.com/",
+  },
+  {
+    name: "Arabic Learning System",
+    description: "web application for learning arabic",
+    tags: [
+      {
+        name: "wordpress",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "moodle LMS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "php",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: als,
+    // source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://arabicsoftonline.org/",
+  },
+  {
+    name: "Metaversus",
+    description:
+      "Web application that allows users to see the beauty of the metaverse",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
       },
     ],
     image: metaverse,
-    source_code_link: 'https://github.com/fadi-alhabib/metaversus',
-    live_link: 'https://metaverse-two-tau.vercel.app/',
+    source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://metaverse-two-tau.vercel.app/",
   },
   {
-    name: 'Chatly',
+    name: "Chatly",
     description:
-      'a dynamic chatting platform that leverages cutting-edge technologies, with a primary focus on real-time messaging',
+      "a dynamic chatting platform that leverages cutting-edge technologies, with a primary focus on real-time messaging",
     tags: [
       {
-        name: 'NextJs',
-        color: 'blue-text-gradient',
+        name: "NextJs",
+        color: "blue-text-gradient",
       },
       {
-        name: 'Redis',
-        color: 'orange-text-gradient',
+        name: "Redis",
+        color: "orange-text-gradient",
       },
       {
-        name: 'tailwindcss',
-        color: 'pink-text-gradient',
+        name: "tailwindcss",
+        color: "pink-text-gradient",
       },
       {
-        name: 'Pusher',
-        color: 'blue-text-gradient',
+        name: "Pusher",
+        color: "blue-text-gradient",
       },
     ],
     image: chatly,
-    source_code_link: 'https://github.com/fadi-alhabib/chatly',
-    live_link: 'https://chatly-gules.vercel.app/',
+    source_code_link: "https://github.com/fadi-alhabib/chatly",
+    live_link: "https://chatly-gules.vercel.app/",
   },
   {
-    name: 'GAMEHUB',
+    name: "GAMEHUB",
     description:
-      'a dynamic web application designed to help gamers find new games and rate the ones they played',
+      "a dynamic web application designed to help gamers find new games and rate the ones they played",
     tags: [
       {
-        name: 'ReactJs',
-        color: 'blue-text-gradient',
+        name: "ReactJs",
+        color: "blue-text-gradient",
       },
       {
-        name: 'Chakra-UI',
-        color: 'green-text-gradient',
+        name: "Chakra-UI",
+        color: "green-text-gradient",
       },
       {
-        name: 'Framer-motion',
-        color: 'pink-text-gradient',
+        name: "Framer-motion",
+        color: "pink-text-gradient",
       },
     ],
     image: gamehub,
-    source_code_link: 'https://github.com/fadi-alhabib/game-hub',
-    live_link: 'https://game-hub-two-taupe.vercel.app/',
+    source_code_link: "https://github.com/fadi-alhabib/game-hub",
+    live_link: "https://game-hub-two-taupe.vercel.app/",
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { experiences, projects, services, technologies };

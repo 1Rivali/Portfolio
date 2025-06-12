@@ -1,34 +1,29 @@
-import * as THREE from 'three';
-import React, { Suspense } from 'react';
-import { Canvas, useLoader } from '@react-three/fiber';
-import { OrbitControls, Preload } from '@react-three/drei';
-import { technologies } from '../constants'; // Import your technologies array here
-import CanvasLoader from './Loader';
-import { SectionWrapper } from '../hoc';
-
-function Ball(props) {
-  const texture = useLoader(THREE.TextureLoader, props.icon);
-
-  return (
-    <mesh castShadow receiveShadow scale={2.75}>
-      <icosahedronGeometry args={[1, 1]} />
-      <meshStandardMaterial color={'#FAF9F6'} map={texture} />
-    </mesh>
-  );
-}
+import { technologies } from "../constants";
+import { SectionWrapper } from "../hoc";
 
 function Tech() {
   return (
-    <Canvas frameloop="always">
-      <OrbitControls enableZoom={false} enablePan={false} />
-      <Suspense fallback={<CanvasLoader />}>
-        <Preload all />
+    <div className="py-10">
+      <h2 className="text-3xl font-bold mb-6 text-center">Technologies</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {technologies.map((tech, index) => (
-          <Ball key={index} icon={tech.icon} />
+          <div
+            key={index}
+            className="flex flex-col items-center bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src={tech.icon}
+              alt={tech.name}
+              className="w-16 h-16 object-contain mb-2"
+            />
+            <span className="mt-1 text-sm font-semibold text-gray-700 dark:text-gray-200">
+              {tech.name}
+            </span>
+          </div>
         ))}
-      </Suspense>
-    </Canvas>
+      </div>
+    </div>
   );
 }
 
-export default SectionWrapper(Tech, '');
+export default SectionWrapper(Tech, "technologies");
