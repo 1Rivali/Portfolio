@@ -217,7 +217,7 @@ const projects = [
   {
     name: "PCA",
     description:
-      "Landing page for a digital solutions company with an advanced admin dashboard to edit the content with html editors",
+      "Landing page for a Luxury Retail with an advanced admin dashboard to edit the content with html editors",
     tags: [
       {
         name: "react",
