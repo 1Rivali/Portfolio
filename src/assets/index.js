@@ -35,15 +35,20 @@ import obadi from "./company/obadi.png";
 import arz from "./company/arz-logo.png";
 import klgk from "./company/knowlgica-logo.png";
 import als from "./projects/als-project.png";
+import arzPort from "./projects/arz-port.png";
 import awaed from "./projects/awaed.png";
 import chatly from "./projects/chatly.png";
 import futureClr from "./projects/futureClr.png";
 import gamehub from "./projects/gamehub.png";
 import grodd from "./projects/grodd.png";
 import metaverse from "./projects/metaverse-project.png";
+import morphios from "./projects/morphios.png";
+import pca from "./projects/pca.png";
+
 export {
   als,
   arz,
+  arzPort,
   asp,
   awaed,
   backend,
@@ -70,11 +75,13 @@ export {
   metaverse,
   mobile,
   mongodb,
+  morphios,
   mysql,
   nestjs,
   nextjs,
   nodejs,
   obadi,
+  pca,
   python,
   reactjs,
   redis,

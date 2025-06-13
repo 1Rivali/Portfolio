@@ -1,6 +1,7 @@
 import {
   als,
   arz,
+  arzPort,
   asp,
   awaed,
   backend,
@@ -18,10 +19,12 @@ import {
   metaverse,
   mobile,
   mongodb,
+  morphios,
   mysql,
   nestjs,
   nextjs,
   obadi,
+  pca,
   reactjs,
   redis,
   tailwind,
@@ -211,6 +214,83 @@ const experiences = [
 // ];
 
 const projects = [
+  {
+    name: "PCA",
+    description:
+      "Landing page for a digital solutions company with an advanced admin dashboard to edit the content with html editors",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: pca,
+    // source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://pca-eight.vercel.app",
+  },
+  {
+    name: "ARZ Landing Page",
+    description: "Landing page for a digital solutions company",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: arzPort,
+    // source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://aperevolutionzone.com/",
+  },
+  {
+    name: "Morphios",
+    description:
+      "A website for booking Mentalism performers for special events",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "chakraui",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: morphios,
+    // source_code_link: "https://github.com/fadi-alhabib/metaversus",
+    live_link: "https://morphios.vercel.app",
+  },
   {
     name: "Grodd, Feature-Based CLI Tool for React",
     description:
