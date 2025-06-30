@@ -232,7 +232,7 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "nestjs",
+        name: "laravel",
         color: "pink-text-gradient",
       },
     ],
@@ -257,7 +257,7 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "nestjs",
+        name: "laravel",
         color: "pink-text-gradient",
       },
     ],
@@ -283,7 +283,7 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "nestjs",
+        name: "laravel",
         color: "pink-text-gradient",
       },
     ],
@@ -323,7 +323,7 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "nestjs",
+        name: "laravel",
         color: "pink-text-gradient",
       },
     ],
@@ -345,7 +345,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "nestjs",
+        name: "laravel",
         color: "pink-text-gradient",
       },
     ],
